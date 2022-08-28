@@ -1,0 +1,37 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr 30px;
+}
+
+.green {
+    background-color: green;
+    border: solid black;
+}
+
+.red {
+    background-color: red;
+    border: solid black;
+}
+
+.noColor {
+    border: solid black;
+}
+
+.circleG {
+    border-radius: 50%;
+    border: solid black;
+    background-color: green;
+}
+
+.circleR {
+    border-radius: 50%;
+    border: solid black;
+    background-color: red;
+}
+
+.noColorCircle {
+    border-radius: 50%;
+    border: solid black;
+}
+
