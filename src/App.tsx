@@ -15,12 +15,8 @@ function App() {
         <div className="App">
 
             <UncontrolledAccordion titleValue={"Menu"} />
-            <UncontrolledAccordion titleValue={"Users"} />
-            <UncontrolledRating value={1}/>
-            <UncontrolledRating value={2}/>
-            <UncontrolledRating value={3}/>
-            <UncontrolledRating value={4}/>
-            <UncontrolledRating value={5}/>
+            {/*<UncontrolledAccordion titleValue={"Users"} />*/}
+            <UncontrolledRating />
             {/*<PageTitle title={"This is APP component"}/>*/}
             {/*<PageTitle title={"My friends"}/>*/}
             {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
