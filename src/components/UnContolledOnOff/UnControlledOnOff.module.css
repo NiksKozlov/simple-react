@@ -1,0 +1,31 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr 30px;
+
+}
+
+.greenB {
+    background-color: green;
+    border: solid black;
+}
+
+.redB {
+    background-color: red;
+    border: solid black;
+}
+
+.noColorB {
+    border: solid black;
+}
+
+.indicatorG {
+    border-radius: 50%;
+    border: solid black;
+    background-color: green;
+}
+
+.indicatorR {
+    border-radius: 50%;
+    border: solid black;
+    background-color: red;
+}
