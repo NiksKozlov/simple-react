@@ -3,7 +3,7 @@ import s from './OnOff.module.css'
 
 type PropsType = {
     on: boolean
-    onClick: (value:boolean) => void
+    setOn: (on:boolean) => void
 }
 
 function OnOff(props: PropsType) {
@@ -40,10 +40,10 @@ function OnOff(props: PropsType) {
     return (
         <div>
             <div style={onStyle}
-                 onClick={()=>props.onClick(true)}>On
+                 onClick={()=>props.setOn(true)}>On
             </div>
             <div style={offStyle}
-                 onClick={()=>props.onClick(false)}>Off
+                 onClick={()=>props.setOn(false)}>Off
             </div>
             <div style={indicatorStyle}></div>
         </div>

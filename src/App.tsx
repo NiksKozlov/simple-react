@@ -3,6 +3,7 @@ import './App.css';
 import {Rating, RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
+import UncontrolledOnOff from './components/UnсontolledOnOff/UnсontrolledOnOff';
 
 //function declaration
 function App() {
@@ -18,13 +19,14 @@ function App() {
     return (
         <div className="App">
             {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
-            <OnOff on={on} onClick={setOn}/>
+            {/*<OnOff on={on} setOn={setOn}/>*/}
             {/*<UncontrolledAccordion titleValue={"Menu"} />*/}
             {/*/!*<UncontrolledAccordion titleValue={"Users"} />*!/*/}
             {/*<UncontrolledRating />*/}
-            {/*<Accordion titleValue={'Menu'}*/}
-            {/*           collapsed={accordionCollapsed}*/}
-            {/*           onClick={() => {setAccordionCollapsed(!accordionCollapsed)}} />*/}
+            <Accordion titleValue={'Menu'}
+                       collapsed={accordionCollapsed}
+                       onChange={() => {setAccordionCollapsed(!accordionCollapsed)}} />
+            <UncontrolledOnOff setOn={setOn}/> {on.toString()}
         </div>
     );
 }
