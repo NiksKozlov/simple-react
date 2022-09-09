@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 
 type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
+    onClick: () => void
 }
 
 function Accordion(props: AccordionPropsType) {
-    console.log("Accordion rendering")
+    console.log('Accordion rendering')
 
     return (
         <div>
-            <AccordionTitle title={props.titleValue} />
+            <AccordionTitle title={props.titleValue} onClick={props.onClick}/>
             {!props.collapsed && <AccordionBody />}
         </div>
     )
@@ -18,15 +19,16 @@ function Accordion(props: AccordionPropsType) {
 
 type AccordionTitlePropsType = {
     title: string
+    onClick: ()=>void
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    console.log("AccordionTitle rendering")
-    return <h3>-- {props.title} --</h3>
+    console.log('AccordionTitle rendering')
+    return <h3 onClick={props.onClick}>-- {props.title} --</h3>
 }
 
 function AccordionBody() {
-    console.log("AccordionBody rendering")
+    console.log('AccordionBody rendering')
     return <ul>
         <li>1</li>
         <li>2</li>
