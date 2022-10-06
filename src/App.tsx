@@ -4,6 +4,7 @@ import {Rating, RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import UncontrolledOnOff from './components/UnсontolledOnOff/UnсontrolledOnOff';
+import {GetValueOfUncontrolledInput} from './components/UncontrolledInput/UncontrolledInput';
 
 //function declaration
 function App() {
@@ -11,9 +12,9 @@ function App() {
     //Обязана вернуть JSX
     console.log('App rendering')
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
-    let [on, setOn] = useState<boolean>(true)
+    // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    // let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
+    // let [on, setOn] = useState<boolean>(true)
 
 
     return (
@@ -23,10 +24,11 @@ function App() {
             {/*<UncontrolledAccordion titleValue={"Menu"} />*/}
             {/*/!*<UncontrolledAccordion titleValue={"Users"} />*!/*/}
             {/*<UncontrolledRating />*/}
-            <Accordion titleValue={'Menu'}
-                       collapsed={accordionCollapsed}
-                       onChange={() => {setAccordionCollapsed(!accordionCollapsed)}} />
-            <UncontrolledOnOff setOn={setOn}/> {on.toString()}
+            {/*<Accordion titleValue={'Menu'}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           onChange={() => {setAccordionCollapsed(!accordionCollapsed)}} />*/}
+            {/*<UncontrolledOnOff setOn={setOn}/> {on.toString()}*/}
+            <GetValueOfUncontrolledInput/>
         </div>
     );
 }
