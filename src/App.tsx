@@ -3,8 +3,9 @@ import './App.css';
 import {Rating, RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
-import UncontrolledOnOff from './components/UnсontolledOnOff/UnсontrolledOnOff';
-import {GetValueOfUncontrolledInput} from './components/UncontrolledInput/UncontrolledInput';
+import UncontrolledOnOff from './components/OnOff/UnсontolledOnOff/UnсontrolledOnOff';
+import {GetValueOfUncontrolledInput} from './components/Input/UncontrolledInput';
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from './components/Input/ControlledInput';
 
 //function declaration
 function App() {
@@ -28,7 +29,10 @@ function App() {
             {/*           collapsed={accordionCollapsed}*/}
             {/*           onChange={() => {setAccordionCollapsed(!accordionCollapsed)}} />*/}
             {/*<UncontrolledOnOff setOn={setOn}/> {on.toString()}*/}
-            <GetValueOfUncontrolledInput/>
+            {/*<GetValueOfUncontrolledInput/>*/}
+            <ControlledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
         </div>
     );
 }
