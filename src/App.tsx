@@ -1,27 +1,20 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
-import UncontrolledOnOff from './components/OnOff/UnсontolledOnOff/UnсontrolledOnOff';
-import {GetValueOfUncontrolledInput} from './components/Input/UncontrolledInput';
-import {ControlledCheckbox, ControlledInput, ControlledSelect} from './components/Input/ControlledInput';
 import {Select} from './components/Select/Select';
 
 //function declaration
 function App() {
-    //Полезное что-то
-    //Обязана вернуть JSX
     // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     // let [on, setOn] = useState<boolean>(true)
     // let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
-    const [value, setValue] = useState(1)
-    const [optionsMode, setOptionsMode] = useState(false)
-
-    const onItemClick = (value: any) => {
-        setValue(value)
-    }
-
+    // const [value, setValue] = useState(2)       ---------------------Alternative select-------------------
+    // const [optionsMode, setOptionsMode] = useState(false)------------Alternative select-------------------
+    // const onItemClick = (value: any) => {       ---------------------Alternative select-------------------
+    //     setValue(value)  --------------------------------------------Alternative select-------------------
+    // }         -------------------------------------------------------Alternative select-------------------
+    const [value, setValue] = useState('2')
 
     return (
         <div className="App">
@@ -36,12 +29,21 @@ function App() {
             {/*        alert(`User with ID ${value} clicked`)*/}
             {/*    }}*/}
             {/*/>*/}
-            <Select optionMode={optionsMode} setOptionMode={setOptionsMode} value={value} onItemClick={onItemClick} items={[{title: 'Nikita', value: 1}, {title: 'Alina', value: 2}, {title: 'Mark', value: 3}]} />
+            {/*<Select optionMode={optionsMode}       -----------------------Alternative select-------------------*/}
+            {/*        setOptionMode={setOptionsMode} */}
+            {/*        value={value}*/}
+            {/*        onItemClick={onItemClick} */}
+            {/*        items={[{title: 'Nikita', value: 1}, {title: 'Alina', value: 2}, {title: 'Mark', value: 3}]} />*/}
+            <Select value={value}
+                    onChange={setValue}
+                    items={[
+                        {value: '1', title: 'Moscow'},
+                        {value: '2', title: 'Kiev'},
+                        {value: '3', title: 'Brest'},
+                    ]} />
             {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
             {/*<OnOff on={on} setOn={setOn}/>*/}
-            {/*<ControlledInput/>*/}
-            {/*<ControlledCheckbox/>*/}
-            {/*<ControlledSelect/>*/}
+
         </div>
     );
 }

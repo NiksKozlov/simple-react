@@ -1,24 +1,53 @@
-.select {
+.select .main{
     border: 1px solid black;
-    border-radius: 5px;
-    height: 40px;
-    width: 100px;
-    padding: 10px 10px 0px 10px;
-    font-size: 16pt;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
 }
 
-.img {
-    height: 15px;
-    width: 15px;
-    padding-left: 30px;
-    margin-right: 0px;
-}
-
-.options {
+.items {
     position: absolute;
-    border: 1px solid black;;
-    height: 80px;
-    width: 100px;
-    padding: 10px 10px 0px 10px;
-    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
 }
+
+.item.selected {
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------Alternative select css-------------------------------------------------------*/
+/*.select {*/
+/*    border: 1px solid black;*/
+/*    border-radius: 5px;*/
+/*    height: 40px;*/
+/*    width: 100px;*/
+/*    padding: 10px 10px 0px 10px;*/
+/*    font-size: 16pt;*/
+/*}*/
+
+/*.img {*/
+/*    height: 15px;*/
+/*    width: 15px;*/
+/*    padding-left: 30px;*/
+/*    margin-right: 0px;*/
+/*}*/
+
+/*.options {*/
+/*    position: absolute;*/
+/*    border: 1px solid black;;*/
+/*    height: 80px;*/
+/*    width: 100px;*/
+/*    padding: 10px 10px 0px 10px;*/
+/*    border-radius: 5px;*/
+/*}*/
