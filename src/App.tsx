@@ -3,6 +3,7 @@ import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import {Select} from './components/Select/Select';
+import UncontrolledAccordion from './components/Accordion/UnсontrolledAccordion/UncontrolledAccordion';
 
 //function declaration
 function App() {
@@ -43,7 +44,7 @@ function App() {
                     ]} />
             {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
             {/*<OnOff on={on} setOn={setOn}/>*/}
-
+            <UncontrolledAccordion titleValue={'menu'}/>
         </div>
     );
 }
