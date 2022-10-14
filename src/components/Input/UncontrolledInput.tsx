@@ -34,3 +34,7 @@ export const GetValueOfUncontrolledInput = () => {
         </>
     );
 };
+
+
+const TrackValueOfUncontrolledInputContainer = React.memo(TrackValueOfUncontrolledInput)
+const GetValueOfUncontrolledInputContainer = React.memo(GetValueOfUncontrolledInput)

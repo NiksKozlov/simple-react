@@ -99,3 +99,6 @@ export function Select(props: SelectPropsType) {
         </>
     )
 }
+
+
+export const SelectContainer = React.memo(Select)

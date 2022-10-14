@@ -45,4 +45,8 @@ function AccordionBody(props: AccordionBodyPropsType) {
     </ul>
 }
 
+export const AccordionContainer = React.memo(Accordion)
+export const AccordionBodyContainer = React.memo(AccordionBody)
+export const AccordionTitleContainer = React.memo(AccordionTitle)
+
 export default Accordion;

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
-import Accordion from './components/Accordion/Accordion';
-import OnOff from './components/OnOff/OnOff';
 import {Select} from './components/Select/Select';
-import UncontrolledAccordion from './components/Accordion/UnсontrolledAccordion/UncontrolledAccordion';
+import NewMessagesCounter, {NemMessageCounterContainer, Users, UsersSecret} from './components/ReactMemo/01';
+
+
 
 //function declaration
 function App() {
@@ -15,7 +15,18 @@ function App() {
     // const onItemClick = (value: any) => {       ---------------------Alternative select-------------------
     //     setValue(value)  --------------------------------------------Alternative select-------------------
     // }         -------------------------------------------------------Alternative select-------------------
-    const [value, setValue] = useState('2')
+    // const [value, setValue] = useState('2')       // Select component state
+    const [counter, setCounter] = useState(0)
+    const [users, setUsers] = useState(['Nikita', 'Mark', 'Alina'])
+    console.log('App rendering')
+
+    const addUser =() => {
+        const newUsers = [...users, 'newChild ' + new Date().getTime()]
+        setUsers(newUsers)
+    }
+
+    users.push('newChild ' + new Date().getTime())
+
 
     return (
         <div className="App">
@@ -35,27 +46,23 @@ function App() {
             {/*        value={value}*/}
             {/*        onItemClick={onItemClick} */}
             {/*        items={[{title: 'Nikita', value: 1}, {title: 'Alina', value: 2}, {title: 'Mark', value: 3}]} />*/}
-            <Select value={value}
-                    onChange={setValue}
-                    items={[
-                        {value: '1', title: 'Moscow'},
-                        {value: '2', title: 'Kiev'},
-                        {value: '3', title: 'Brest'},
-                    ]} />
+            {/*<SelectContainer value={value}*/}
+            {/*        onChange={setValue}*/}
+            {/*        items={[*/}
+            {/*            {value: '1', title: 'Moscow'},*/}
+            {/*            {value: '2', title: 'Kiev'},*/}
+            {/*            {value: '3', title: 'Brest'},*/}
+            {/*        ]} />*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
             {/*<OnOff on={on} setOn={setOn}/>*/}
-            <UncontrolledAccordion titleValue={'menu'}/>
+            {/*<UncontrolledAccordion titleValue={'menu'}/>*/}
+            <button onClick={() => {setCounter(counter + 1)}}>+</button>
+            <button onClick={addUser}>add User</button>
+            <NemMessageCounterContainer count={counter} />
+            <Users users={users} />
         </div>
     );
 }
 
-type PageTitlePropsType = {
-    title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-    console.log('PageTitle rendering')
-    return <h1> {props.title} </h1>
-}
 
 export default App;

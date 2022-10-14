@@ -50,4 +50,6 @@ function OnOff(props: PropsType) {
     )
 }
 
+const OnOffContainer = React.memo(OnOff)
+
 export default OnOff;

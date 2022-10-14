@@ -36,3 +36,7 @@ export const ControlledSelect = () => {
         </select>
     )
 }
+
+const ControlledInputContainer = React.memo(ControlledInput)
+const ControlledCheckboxContainer = React.memo(ControlledCheckbox)
+const ControlledSelectContainer = React.memo(ControlledSelect)

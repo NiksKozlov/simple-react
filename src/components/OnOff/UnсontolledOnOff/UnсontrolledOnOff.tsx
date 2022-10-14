@@ -59,4 +59,6 @@ function UncontrolledOnOff(props: PropsType) {
     )
 }
 
+const UncontrolledOnOffContainer = React.memo(UncontrolledOnOff)
+
 export default UncontrolledOnOff;

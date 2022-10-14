@@ -1,5 +1,6 @@
 import React, {useReducer} from 'react';
 import {reducer, TOGGLE_COLLAPSED} from './reducer';
+import Accordion from '../Accordion';
 
 type AccordionPropsType = {
     titleValue: string
@@ -43,5 +44,9 @@ function AccordionBody() {
         <li>3</li>
     </ul>
 }
+
+export const UncontrolledAccordionContainer = React.memo(UncontrolledAccordion)
+export const UncontrolledAccordionBodyContainer = React.memo(AccordionBody)
+export const UncontrolledAccordionTitleContainer = React.memo(AccordionTitle)
 
 export default UncontrolledAccordion;

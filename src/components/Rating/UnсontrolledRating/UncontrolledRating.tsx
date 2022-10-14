@@ -36,3 +36,7 @@ function Star(props: StarPropsType) {
     //     return <span>star </span>
     // }
 }
+
+
+export const UncontrolledRatingContainer = React.memo(UncontrolledRating)
+export const UncontrolledRatingStarContainer = React.memo(Star)
