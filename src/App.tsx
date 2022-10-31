@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Select} from './components/Select/Select';
 import NewMessagesCounter, {NemMessageCounterContainer, Users, UsersSecret} from './components/ReactMemo/01';
+import {UseMemoExample} from './components/UseMemo/UseMemo';
 
 
 
@@ -30,6 +31,7 @@ function App() {
 
     return (
         <div className="App">
+            <UseMemoExample />
             {/*<Accordion*/}
             {/*    titleValue={'Users'}*/}
             {/*    collapsed={accordionCollapsed}*/}
@@ -56,10 +58,10 @@ function App() {
             {/*<Rating value={ratingValue} onClick={setRatingValue} />*/}
             {/*<OnOff on={on} setOn={setOn}/>*/}
             {/*<UncontrolledAccordion titleValue={'menu'}/>*/}
-            <button onClick={() => {setCounter(counter + 1)}}>+</button>
-            <button onClick={addUser}>add User</button>
-            <NemMessageCounterContainer count={counter} />
-            <Users users={users} />
+            {/*<button onClick={() => {setCounter(counter + 1)}}>+</button>*/}
+            {/*<button onClick={addUser}>add User</button>*/}
+            {/*<NemMessageCounterContainer count={counter} />*/}
+            {/*<Users users={users} />*/}
         </div>
     );
 }
