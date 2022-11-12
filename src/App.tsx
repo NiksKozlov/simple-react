@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Select} from './components/Select/Select';
+import {Select, SelectContainer} from './components/Select/Select';
 import NewMessagesCounter, {NemMessageCounterContainer, Users, UsersSecret} from './components/ReactMemo/01';
 import {UseMemoExample} from './components/UseMemo/UseMemo';
+import HelpToReactWithMemo from './components/UseMemo/HelpToReactWithMemo';
 
 
 
@@ -16,21 +17,22 @@ function App() {
     // const onItemClick = (value: any) => {       ---------------------Alternative select-------------------
     //     setValue(value)  --------------------------------------------Alternative select-------------------
     // }         -------------------------------------------------------Alternative select-------------------
-    // const [value, setValue] = useState('2')       // Select component state
-    const [counter, setCounter] = useState(0)
-    const [users, setUsers] = useState(['Nikita', 'Mark', 'Alina'])
-    console.log('App rendering')
+    const [value, setValue] = useState('2')       // Select component state
+    //const [counter, setCounter] = useState(0)
+    //const [users, setUsers] = useState(['Nikita', 'Mark', 'Alina'])
+    //console.log('App rendering')
 
-    const addUser =() => {
-        const newUsers = [...users, 'newChild ' + new Date().getTime()]
-        setUsers(newUsers)
-    }
+    // const addUser =() => {
+    //     const newUsers = [...users, 'newChild ' + new Date().getTime()]
+    //     setUsers(newUsers)
+    // }
 
-    users.push('newChild ' + new Date().getTime())
+    //users.push('newChild ' + new Date().getTime())
 
 
     return (
         <div className="App">
+            <HelpToReactWithMemo/>
             <UseMemoExample />
             {/*<Accordion*/}
             {/*    titleValue={'Users'}*/}

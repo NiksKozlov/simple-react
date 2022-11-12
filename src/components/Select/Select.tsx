@@ -5,6 +5,7 @@ import s from './Select.module.css'
 type ItemType = {
     title: string
     value: any
+    population: number
 }
 
 type SelectPropsType = {
@@ -18,8 +19,11 @@ type SelectPropsType = {
 
 
 export function Select(props: SelectPropsType) {
+    console.log('Select')
     // const selectTitle = props.items.filter(i => i.value === props.value)--------------Alternative select-------------------
     // const onClickTitle = () => props.setOptionMode(!props.optionMode)-----------------Alternative select-------------------
+
+
     const [active, setActive] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
 
